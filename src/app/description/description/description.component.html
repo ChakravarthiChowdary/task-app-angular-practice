@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline" style="width: 100%">
+  <mat-label>Description</mat-label>
+  <textarea
+    matInput
+    maxlength="100"
+    (change)="onTaskDescriptionChange($event)"
+    [value]="taskInfo?.taskDescription"
+  ></textarea>
+</mat-form-field>

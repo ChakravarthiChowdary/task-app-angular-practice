@@ -1,0 +1,10 @@
+<mat-form-field class="input-container" appearance="outline">
+  <mat-label>Your Task</mat-label>
+  <input
+    matInput
+    placeholder="Enter Task"
+    [value]="taskInfo?.taskName"
+    class="input-component"
+    (change)="onTaskInputChange($event)"
+  />
+</mat-form-field>

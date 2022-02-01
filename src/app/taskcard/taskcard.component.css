@@ -1,0 +1,9 @@
+.border-pending {
+  border: 1px solid #f0ad4e;
+  box-shadow: 4px 4px 10px 2px #f0ad4e;
+}
+
+.border-completed {
+  border: 1px solid limegreen;
+  box-shadow: 4px 4px 10px 2px limegreen;
+}

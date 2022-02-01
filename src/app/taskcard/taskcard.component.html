@@ -1,0 +1,15 @@
+<mat-card
+  [ngClass]="{
+    'border-pending': !task?.Completed,
+    'border-completed': task?.Completed
+  }"
+  appBgColorChange
+  [taskCompleted]="task?.Completed"
+>
+  <mat-card-title>{{ task?.Name }}</mat-card-title>
+  <mat-card-content> {{ task?.Description }}</mat-card-content>
+  <mat-card-content
+    >Status of this task is
+    {{ task?.Completed ? "COMPLETED" : "PENDING" }}</mat-card-content
+  >
+</mat-card>

@@ -1,0 +1,10 @@
+<mat-form-field appearance="outline" class="select-container">
+  <mat-label>Status of task</mat-label>
+  <mat-select
+    (selectionChange)="onTaskStatusChange($event)"
+    [value]="taskInfo?.taskStatus"
+  >
+    <mat-option value="pending">Pending</mat-option>
+    <mat-option value="completed">Completed</mat-option>
+  </mat-select>
+</mat-form-field>
