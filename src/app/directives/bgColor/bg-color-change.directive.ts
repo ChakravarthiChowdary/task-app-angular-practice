@@ -16,14 +16,16 @@ export class BgColorChangeDirective {
 
   @HostBinding('style.backgroundColor') bgColor = '';
   @HostBinding('style.borderColor') borderColor = '';
+  @HostBinding('style.transition') transition = '';
 
-  bgColorCode = '#D3D3D3';
+  bgColorCode = '#F8F8F8';
   taskCompletedColorCode = 'limegreen';
   taskPendingColorCode = '#f0ad4e';
 
   @HostListener('mouseenter') mouseEnter() {
     this.bgColor = this.bgColorCode;
     this.borderColor = this.bgColorCode;
+    this.transition = '0.5s ease';
   }
 
   @HostListener('mouseleave') mouseLeave() {

@@ -28,6 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.tasks = this.tasksService.getTasks();
     this.tasksService.tasksModified.subscribe((tasks) => (this.tasks = tasks));
     this.tasksService.taskInfoUpdated.subscribe(
       (taskInfo) => (this.taskInfo = taskInfo)
@@ -40,7 +41,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   onCreateBtnClick() {
-    console.log(this.taskInfo);
     if (
       this.taskInfo &&
       this.taskInfo.taskName !== '' &&
@@ -52,6 +52,7 @@ export class AppComponent implements OnInit, OnDestroy {
         Description: this.taskInfo.taskDescription,
         Completed: this.taskInfo.taskStatus === 'completed',
         Id: uuid.v4(),
+        DateCreated: '',
       });
     } else {
       this.openSnackBar('Cannot leave any field empty !', 'OK');

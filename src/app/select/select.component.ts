@@ -30,6 +30,7 @@ export class SelectComponent implements OnInit, OnDestroy {
         taskStatus: event.value,
         taskDescription: '',
         taskName: '',
+        DateCreated: '',
       };
       this.taskService.updateTaskInfo(this.taskInfo);
     }

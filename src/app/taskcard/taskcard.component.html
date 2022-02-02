@@ -5,11 +5,37 @@
   }"
   appBgColorChange
   [taskCompleted]="task?.Completed"
+  class="card-container"
 >
   <mat-card-title>{{ task?.Name }}</mat-card-title>
-  <mat-card-content> {{ task?.Description }}</mat-card-content>
-  <mat-card-content
-    >Status of this task is
-    {{ task?.Completed ? "COMPLETED" : "PENDING" }}</mat-card-content
-  >
+  <div class="taskcard-divider">
+    <mat-divider></mat-divider>
+  </div>
+  <div class="description-container">
+    <mat-card-content> {{ task?.Description }}</mat-card-content>
+    <mat-card-content
+      >Status of this task is
+      {{ task?.Completed ? "COMPLETED" : "PENDING" }}</mat-card-content
+    >
+  </div>
+  <div class="edit-icon">
+    <button
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+      (click)="editBtnClick()"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+  <div class="edit-icon edit-icon-delete">
+    <button
+      mat-mini-fab
+      color="warn"
+      aria-label="Example icon button with a menu icon"
+      (click)="deleteBtnClick()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
 </mat-card>

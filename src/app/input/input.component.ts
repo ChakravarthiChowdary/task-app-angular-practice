@@ -30,6 +30,7 @@ export class InputComponent implements OnInit, OnDestroy {
         taskName: event.target.value,
         taskDescription: '',
         taskStatus: '',
+        DateCreated: '',
       };
       this.taskService.updateTaskInfo(this.taskInfo);
     }

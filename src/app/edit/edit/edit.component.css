@@ -1,0 +1,19 @@
+.edit-card {
+  height: 37vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.update-task-btn {
+  width: 100%;
+}
+
+.input-container {
+  width: 100%;
+}
+
+.select-container {
+  width: 100%;
+}

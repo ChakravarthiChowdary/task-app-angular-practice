@@ -1,21 +1,28 @@
 <div class="container">
-  <div class="task-container">
-    <h1 class="task-heading">Task App</h1>
-    <app-input></app-input>
-    <app-select></app-select>
-    <app-description></app-description>
-    <button
-      mat-raised-button
-      color="primary"
-      class="create-task-btn"
-      (click)="onCreateBtnClick()"
-    >
-      Create Task
-    </button>
-    <div class="row">
-      <div *ngFor="let task of tasks" class="col-sm-4 task-card-container">
-        <app-taskcard [task]="task"></app-taskcard>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="task-container">
+        <h1 class="task-heading">Task App</h1>
+        <app-input></app-input>
+        <app-select></app-select>
+        <app-description></app-description>
+        <button
+          mat-raised-button
+          color="primary"
+          class="create-task-btn"
+          (click)="onCreateBtnClick()"
+        >
+          Create Task
+        </button>
+        <div class="row">
+          <div *ngFor="let task of tasks" class="col-sm-6 task-card-container">
+            <app-taskcard [task]="task"></app-taskcard>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="col-md-4 edit-component">
+      <app-edit></app-edit>
     </div>
   </div>
 </div>

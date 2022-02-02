@@ -30,6 +30,7 @@ export class DescriptionComponent implements OnInit, OnDestroy {
         taskName: '',
         taskDescription: event.target.value,
         taskStatus: '',
+        DateCreated: '',
       };
       this.taskService.updateTaskInfo(this.taskInfo);
     }

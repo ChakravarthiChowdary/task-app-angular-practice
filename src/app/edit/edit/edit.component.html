@@ -1,0 +1,52 @@
+<mat-card>
+  <div class="edit-card">
+    <div>
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Your Task</mat-label>
+        <input
+          matInput
+          placeholder="Enter Task"
+          class="input-component"
+          [disabled]="taskSelected === null"
+          [value]="taskSelected?.Name"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="select-container">
+        <mat-label>Status of task</mat-label>
+        <mat-select
+          [disabled]="taskSelected === null"
+          [value]="
+            taskSelected
+              ? taskSelected?.Completed
+                ? 'completed'
+                : 'pending'
+              : ''
+          "
+        >
+          <mat-option value="pending">Pending</mat-option>
+          <mat-option value="completed">Completed</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" style="width: 100%">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          maxlength="100"
+          [disabled]="taskSelected === null"
+          [value]="taskSelected?.Description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <button
+        class="update-task-btn"
+        mat-raised-button
+        color="primary"
+        [disabled]="taskSelected === null"
+        (click)="updateBtnClick()"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</mat-card>

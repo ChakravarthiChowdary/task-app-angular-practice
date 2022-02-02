@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,7 @@ import { SelectComponent } from './select/select.component';
 import { TaskcardComponent } from './taskcard/taskcard.component';
 import { BgColorChangeDirective } from './directives/bgColor/bg-color-change.directive';
 import { DescriptionComponent } from './description/description/description.component';
+import { EditComponent } from './edit/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { DescriptionComponent } from './description/description/description.comp
     TaskcardComponent,
     BgColorChangeDirective,
     DescriptionComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { DescriptionComponent } from './description/description/description.comp
     MatDividerModule,
     MatCardModule,
     MatSnackBarModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
